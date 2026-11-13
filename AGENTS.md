@@ -28,3 +28,6 @@ use the editor.
   own key and store it in Secrets.
 - **Secrets.** Lovable manages them. Do not put secret values in the repo.
 <!-- LOVABLE:END -->
+
+## Portfolio structure
+- Keep the portfolio as a single-page experience in `src/routes/index.tsx`; define its shared visual tokens and responsive presentation in `src/styles.css` so the portfolio remains cohesive.
