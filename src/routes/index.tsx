@@ -1,6 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { ArrowDown, ArrowRight, ArrowUpRight, Github, Linkedin, Mail, Menu, MoveUpRight, X } from "lucide-react";
 import { useState } from "react";
+import portraitAsset from "@/assets/oussama-portrait.png.asset.json";
 
 const services = [
   { number: "01", title: "AI Automation", description: "Intelligent workflows that remove repetitive work, reduce manual errors, and give teams more room to focus." },
@@ -74,7 +75,7 @@ function Portfolio() {
             <p className="intro-lede">I design and build thoughtful AI automations, intelligent systems, and web experiences that make good ideas work in the real world.</p>
             <div className="intro-actions"><a className="text-link" href="#work">Explore selected work <ArrowDown size={15} /></a><a className="text-link subtle-link" href="https://github.com/oussamarca" target="_blank" rel="noreferrer"><Github size={15} /> GitHub <ArrowUpRight size={14} /></a></div>
           </div>
-          <figure className="portrait-frame"><img src="/images/portfolio/portrait.png" alt="Portrait of Oussama Abdeljebbar" /><figcaption><span>Oussama Abdeljebbar</span><span>Builder · Problem solver</span></figcaption></figure>
+          <figure className="portrait-frame"><img src={portraitAsset.url} alt="Portrait of Oussama Abdeljebbar" /><figcaption><span>Oussama Abdeljebbar</span><span>Builder · Problem solver</span></figcaption></figure>
         </div>
         <a className="scroll-cue" href="#about"><span>Scroll to discover</span><ArrowDown size={14} /></a>
       </section>
