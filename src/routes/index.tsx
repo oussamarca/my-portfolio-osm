@@ -62,7 +62,7 @@ function Portfolio() {
           <a href="#skills" onClick={() => setMenuOpen(false)}>Skills</a>
           <a href="#contact" onClick={() => setMenuOpen(false)}>Contact</a>
         </nav>
-        <a className="header-contact" href="mailto:oussamaabdel889@gmail.com">Let's talk <ArrowUpRight size={14} /></a>
+        <a className="header-contact" href="mailto:abdeljebbaroussama51@gmail.com">Let's talk <ArrowUpRight size={14} /></a>
         <button className="menu-toggle" type="button" aria-label={menuOpen ? "Close navigation" : "Open navigation"} aria-expanded={menuOpen} onClick={() => setMenuOpen(!menuOpen)}>{menuOpen ? <X /> : <Menu />}</button>
       </header>
 
@@ -106,9 +106,9 @@ function Portfolio() {
         <div className="cert-list">{certificates.map((certificate, index) => <article className="cert-row" key={certificate.title}><span className="row-number">0{index + 1}</span><img src={certificate.image} alt={certificate.alt} loading="lazy" /><div className="cert-info"><h3>{certificate.title}</h3><p>{certificate.issuer} <span>·</span> {certificate.date}</p><small>{certificate.detail}</small></div><a className="cert-open" href={certificate.image} target="_blank" rel="noreferrer" aria-label={`View ${certificate.title}`}><ArrowUpRight size={17} /></a></article>)}</div>
       </section>
 
-      <section className="contact-section section-pad" id="contact"><div className="contact-top"><span className="section-index">06 / START A CONVERSATION</span><span className="contact-location"><i className="availability-dot" /> Open to select collaborations</span></div><h2>Have something<br />good in <span className="serif-accent">mind?</span></h2><a className="contact-cta" href="mailto:oussamaabdel889@gmail.com"><span>Tell me about it</span><ArrowUpRight size={19} /></a><div className="contact-bottom"><p>New ideas, ambitious projects, or a simple hello — my inbox is open.</p><a className="contact-email" href="mailto:oussamaabdel889@gmail.com">oussamaabdel889@gmail.com <ArrowUpRight size={14} /></a></div></section>
+      <section className="contact-section section-pad" id="contact"><div className="contact-top"><span className="section-index">06 / START A CONVERSATION</span><span className="contact-location"><i className="availability-dot" /> Open to select collaborations</span></div><h2>Have something<br />good in <span className="serif-accent">mind?</span></h2><a className="contact-cta" href="mailto:abdeljebbaroussama51@gmail.com"><span>Tell me about it</span><ArrowUpRight size={19} /></a><div className="contact-bottom"><p>New ideas, ambitious projects, or a simple hello — my inbox is open.</p><a className="contact-email" href="mailto:abdeljebbaroussama51@gmail.com">abdeljebbaroussama51@gmail.com <ArrowUpRight size={14} /></a></div></section>
 
-      <footer className="site-footer"><a className="wordmark" href="#home"><span>Oussama Abdel</span><small>Built with intention · Morocco</small></a><div className="social-links"><a href="https://www.linkedin.com/in/oussama-abdel-jebbar-8784b037b/" target="_blank" rel="noreferrer" aria-label="LinkedIn"><Linkedin size={17} /></a><a href="https://github.com/oussamarca" target="_blank" rel="noreferrer" aria-label="GitHub"><Github size={17} /></a><a href="mailto:oussamaabdel889@gmail.com" aria-label="Email"><Mail size={17} /></a></div><a className="back-top" href="#home">Back to top <MoveUpRight size={14} /></a><span className="copyright">© 2026</span></footer>
+      <footer className="site-footer"><a className="wordmark" href="#home"><span>Oussama Abdel</span><small>Built with intention · Morocco</small></a><div className="social-links"><a href="https://www.linkedin.com/in/oussama-abdel-jebbar-8784b037b/" target="_blank" rel="noreferrer" aria-label="LinkedIn"><Linkedin size={17} /></a><a href="https://github.com/oussamarca" target="_blank" rel="noreferrer" aria-label="GitHub"><Github size={17} /></a><a href="mailto:abdeljebbaroussama51@gmail.com" aria-label="Email"><Mail size={17} /></a></div><a className="back-top" href="#home">Back to top <MoveUpRight size={14} /></a><span className="copyright">© 2026</span></footer>
     </main>
   );
 }
