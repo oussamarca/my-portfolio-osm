@@ -1,6 +1,8 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { ArrowDown, ArrowRight, ArrowUpRight, Github, Linkedin, Mail, Menu, MoveUpRight, X } from "lucide-react";
 import { useState } from "react";
+import { Button } from "@/components/ui/button";
+import { Dialog, DialogContent, DialogTitle, DialogTrigger } from "@/components/ui/dialog";
 import portraitAsset from "@/assets/oussama-portrait.png.asset.json";
 
 const services = [
@@ -92,7 +94,7 @@ function Portfolio() {
 
       <section className="work-section section-pad" id="work">
         <div className="work-heading"><div><span className="section-index">03 / SELECTED WORK</span><h2>Made to be <span className="serif-accent">useful.</span></h2></div><p>A selection of digital experiences and intelligent systems built around real needs.</p></div>
-        <div className="project-grid">{projects.map((project) => <article className="project-item" key={project.number}><a className="project-image-link" href={project.link ?? "#contact"} target={project.link ? "_blank" : undefined} rel={project.link ? "noreferrer" : undefined} aria-label={`${project.title} project preview`}><img className="project-image" src={project.image} alt={project.imageAlt} loading="lazy" /><span className="image-index">{project.number}</span><span className="image-open"><ArrowUpRight size={18} /></span></a><div className="project-meta"><span>{project.category}</span><span>PROJECT {project.number}</span></div><h3>{project.title}</h3><p className="project-description">{project.description}</p><p className="project-impact"><span>Outcome</span>{project.impact}</p><div className="tag-list">{project.tags.map((tag) => <span key={tag}>{tag}</span>)}</div>{project.link && <a className="project-link" href={project.link} target="_blank" rel="noreferrer">{project.linkLabel}<ArrowUpRight size={14} /></a>}</article>)}</div>
+        <div className="project-grid">{projects.map((project) => <article className="project-item" key={project.number}><Dialog><DialogTrigger asChild><Button variant="ghost" className="project-image-link" aria-label={`View larger image: ${project.title}`}><img className="project-image" src={project.image} alt={project.imageAlt} loading="lazy" /><span className="image-index">{project.number}</span><span className="image-open"><ArrowUpRight size={18} /></span></Button></DialogTrigger><DialogContent className="project-lightbox"><DialogTitle className="sr-only">{project.title}</DialogTitle><img src={project.image} alt={project.imageAlt} /><p>{project.title}</p></DialogContent></Dialog><div className="project-meta"><span>{project.category}</span><span>PROJECT {project.number}</span></div><h3>{project.title}</h3><p className="project-description">{project.description}</p><p className="project-impact"><span>Outcome</span>{project.impact}</p><div className="tag-list">{project.tags.map((tag) => <span key={tag}>{tag}</span>)}</div>{project.link && <a className="project-link" href={project.link} target="_blank" rel="noreferrer">{project.linkLabel}<ArrowUpRight size={14} /></a>}</article>)}</div>
         <div className="github-note"><span><Github size={18} /> Exploring beyond the portfolio</span><a className="text-link" href="https://github.com/oussamarca" target="_blank" rel="noreferrer">More on GitHub <ArrowUpRight size={15} /></a></div>
       </section>
 
